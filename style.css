@@ -317,7 +317,6 @@ h2 {
   width: 100px;
   cursor: pointer;
   accent-color: #1ed760;
-  /* Start with green accent */
   height: 4px;
 }
 
@@ -333,7 +332,6 @@ h2 {
   font-size: 11px;
   color: #b3b3b3;
   width: 35px;
-  /* Fixed width to prevent jumping */
   text-align: center;
 }
 

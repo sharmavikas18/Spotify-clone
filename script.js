@@ -8,10 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const songImg = document.getElementById('current-song-img');
     const volumeSlider = document.getElementById('volume-slider');
 
-    // State
-    let currentSongKey = null; // 'chill', 'rock'
+    let currentSongKey = null;
 
-    // Song Data
     const songs = {
         chill: {
             title: "Lose My Mind",
@@ -27,9 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Helper to update all card icons for a specific key
     function updateAllCardIcons(key, isPlaying) {
-        // Select all play buttons with the matching data-song attribute
         const buttons = document.querySelectorAll(`.play-btn[data-song="${key}"]`);
         buttons.forEach(btn => {
             const icon = btn.querySelector('i');
@@ -82,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateMasterPlay(false);
             }
         } else {
-            // New song
             currentSongKey = key;
             audio.src = song.src;
             songTitle.innerText = song.title;
@@ -90,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             songImg.src = song.img;
             songImg.style.opacity = "1";
 
-            // Reset other icons
             resetAllIcons();
 
             audio.play();
@@ -143,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentSongKey) updateAllCardIcons(currentSongKey, true);
     });
 
-    // --- Seek Bar Logic ---
     const progressBar = document.getElementById('progress-bar');
     const currentTimeSpan = document.getElementById('current-time');
     const totalDurationSpan = document.getElementById('total-duration');
