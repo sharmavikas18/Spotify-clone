@@ -11,7 +11,7 @@ body {
   overflow: hidden;
 }
 
-/* Layout */
+
 .app {
   display: flex;
   height: calc(100vh - 90px);
@@ -19,7 +19,7 @@ body {
   padding: 8px;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 320px;
   background: #121212;
@@ -44,7 +44,7 @@ body {
   font-size: 20px;
 }
 
-/* Navigation */
+
 .nav {
   list-style: none;
 }
@@ -86,7 +86,7 @@ body {
   margin-bottom: 6px;
 }
 
-/* Main */
+
 .main {
   flex: 1;
   background: linear-gradient(180deg, #1e1e1e 0%, #121212 20%);
@@ -95,7 +95,7 @@ body {
   overflow-y: auto;
 }
 
-/* Top bar */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -127,13 +127,13 @@ body {
   border-radius: 20px;
 }
 
-/* Headings */
+
 h2 {
   font-size: 22px;
   margin-bottom: 16px;
 }
 
-/* Small cards */
+
 .small-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -176,7 +176,7 @@ h2 {
   opacity: 1;
 }
 
-/* Medium Card Play Button */
+
 .card .play-btn {
   position: absolute;
   bottom: 20px;
@@ -203,7 +203,6 @@ h2 {
   transform: translateY(0);
 }
 
-/* Medium cards */
 .cards {
   display: flex;
   gap: 24px;
@@ -245,14 +244,13 @@ h2 {
   line-height: 1.4;
 }
 
-/* Rounded Artist Images */
 .artist-img {
   border-radius: 50% !important;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 
-/* Player */
+
 .player {
   position: fixed;
   bottom: 0;
@@ -266,7 +264,6 @@ h2 {
   padding: 0 30px;
 }
 
-/* Song info */
 .song {
   display: flex;
   align-items: center;
@@ -287,7 +284,7 @@ h2 {
   color: #b3b3b3;
 }
 
-/* Controls */
+
 .player-center {
   display: flex;
   flex-direction: column;
@@ -306,7 +303,7 @@ h2 {
   color: #b3b3b3;
 }
 
-/* Volume */
+
 .volume {
   display: flex;
   align-items: center;
@@ -320,7 +317,6 @@ h2 {
   height: 4px;
 }
 
-/* Playback Bar */
 .playback-bar {
   display: flex;
   align-items: center;
@@ -342,7 +338,7 @@ h2 {
   height: 4px;
 }
 
-/* Hover effect for volume icon */
+
 .volume i:hover {
   color: #fff;
 }

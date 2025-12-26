@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('chill-audio');
 
-    // Player Bar Elements
     const masterPlay = document.getElementById('master-play');
     const songTitle = document.getElementById('current-song-title');
     const songArtist = document.getElementById('current-song-artist');
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Update Master Play
+
     function updateMasterPlay(isPlaying) {
         if (isPlaying) {
             masterPlay.classList.remove('fa-circle-play');
@@ -62,11 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Main Play Logic
     function playSong(key) {
         const song = songs[key];
 
-        // If clicking the same song that is already active
         if (currentSongKey === key) {
             if (audio.paused) {
                 audio.play();
@@ -93,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Event Listeners for ALL Buttons
+   
     const allPlayButtons = document.querySelectorAll('.play-btn');
     allPlayButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -110,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Toggle current
         if (audio.paused) {
             audio.play();
             updateAllCardIcons(currentSongKey, true);
@@ -122,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Volume
+
     volumeSlider.addEventListener('input', (e) => {
         audio.volume = e.target.value / 100;
     });
